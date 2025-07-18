@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
     from: contact?.wa_id ?? 'unknown',
     body: message.text.body,
     direction: 'incoming',
-    timestamp: new Date(Number(message.timestamp) * 1000).toISOString()
+    created_at: new Date(Number(message.timestamp) * 1000).toISOString()
   };
 
    console.log('📦 Entry to insert:', entry);
